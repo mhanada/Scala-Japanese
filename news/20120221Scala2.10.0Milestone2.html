@@ -6,28 +6,17 @@
 Scalaの<a href="http://www.scala-lang.org/downloads#Milestones">新しいマイルストーンリリース</a>が入手可能になりました。これは最新の開発版をそのまま取り出したもので、製品環境で使用できるものではありません。ですが、Scala 2.10.0に取り入れられる機能を試す絶好のチャンスです。<br>
 このマイルストーンリリースには以下の不具合修正と改善が含まれています:<br>
 <ul>
-<li>Support for implementing a parallel collection using a concurrent collection. In particular, one should be able to implement a combiner using a concurrent (thread-safe) collection.</li>
-<li>平行コレクションを利用した並列化コレクションの実装をサポート。特に、（スレッドセーフな）並行コレクションを使ってCombinerの実装が可能になります。</li>
-
-<li>Ctries added to the standard library. Implement parallel ctries using the above mechanism.</li>
+<li>（同時アクセス時の性能とスレッドセーフが考慮された）コンカレントコレクションを利用した（コレクション演算が並列実行される）パラレルコレクションの実装をサポート。特に、コンカレントコレクションを使ってCombinerの実装が可能になります。</li>
 <li>標準ライブラリにCトライを追加。上記のメカニズムを使って並列化Cトライを実装しています。</li>
-
-<li>New futures and promises library added to scala.concurrent, joint work with the Akka team.</li>
 <li>新しいフューチャーとプロミスのライブラリがscala.concurrentパッケージに追加されました。Akkaチームと協力した成果です。</li>
-
-<li>Numerous improvements to reification.</li>
 <li>レイフィケーションの改善多数。</li>
-
-<li>Virtual pattern matcher improvements -- please try compiling your project with -Yvirtpatmat, it will be on by default starting with 2.10.0-M3!</li>
 <li>仮想化パターンマッチの改善。  -Yvirtpatmatオプションをつけてコンパイルしてください。2.10.0 M3ではデフォルトでオンにする予定です。</li>
-
-<li>A significantly faster optimizer.</li>
 <li>オプティマイザの大幅な高速化。</li>
-
-<li>Improvements to RedBlack tree.</li>
 <li>赤黒木の改善。</li>
-
-<li>Fixes to specialization (AnyRef, interaction of final and @inline -- thank you, Erik Osheim!).</li>
-<li>スペシャライゼーションの不具合修正（AnyRef、finalと@inlineの相互作用 -- ありがとう、Erik Osheim!）。</li>
+<li>特化型パラメータの不具合修正（AnyRef、finalと@inlineの相互作用 -- ありがとう、Erik Osheim!）。</li>
 </ul>
 <a href="http://www.scala-lang.org/node/12550">続きを読む（原文）</a>
+
+（訳注:続きには修正された不具合のリストがあります。
+パッチ提供者としてKota Mizushima(@kmizu）さんの名前が掲載されています!
+レイフィケーションについては<a href="http://d.hatena.ne.jp/m-hiyama/20080109/1199863428">檜山正幸さんのブログ記事</a>が参考になります。）
